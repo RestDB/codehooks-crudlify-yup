@@ -1,6 +1,6 @@
 {
   "name": "codehooks-crudlify-yup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CRUD automation library for codehooks.io",
   "main": "index.js",
   "scripts": {
@@ -11,12 +11,12 @@
     "url": "git+https://github.com/RestDB/codehooks-crudlify-yup.git"
   },
   "files": [
-		"index.js",
-		"npm-shrinkwrap.json"
-	],
-	"np": {
-		"yarn": false
-	},
+    "index.js",
+    "npm-shrinkwrap.json"
+  ],
+  "np": {
+    "yarn": false
+  },
   "keywords": [
     "crud",
     "rest",
