@@ -22,7 +22,8 @@ let schema = {
     "customer":
         yup.object().shape({
             name: yup.string().required(),
-            age: yup.number().required().positive().integer()
+            status: yup.string().required(),
+            purchase: yup.number().required().positive().integer()
         }),
     "product":
         yup.object().shape({
