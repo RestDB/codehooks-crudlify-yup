@@ -46,7 +46,7 @@ Your Codehooks.io application will get these endpoints for any collection define
 
 | Verb  | Codehooks.io route  | Description  | Example endpoint  |
 |---|---|---|---|
-| `GET`  | https://{TENANT-ID}/{SPACE}/:collection  | Retrieve objects from a collection  | https://myproject-ff00/dev/customer  |
+| `GET`  | https://{TENANT-ID}/{SPACE}/:collection  | Retrieve objects (by query) from a collection  | https://myproject-ff00/dev/customer?status=active&purchase>100  |
 | `GET`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Retrieve object by ID from a collection  | https://myproject-ff00/dev/customer/1826817743c-6b11t89gws82a0  |
 | `POST` | https://{TENANT-ID}/{SPACE}/:collection  | Add object(s) to a collection  | https://myproject-ff00/dev/customer  |
 | `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID in a collection  | https://myproject-ff00/dev/customer/1826817743c-6b11t89gws82a0  |
