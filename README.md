@@ -41,7 +41,7 @@ export default app.init();
 ```
 
 ## Automatic REST API
-By using the `crudlify(app, schema)` function, any Codehooks.io app effectively gets a complete HTTP/2 REST API with schema validation and data persistence.
+By using the `crudlify(app, schema)` function, your Codehooks.io app effectively gets a complete HTTP/2 REST API with schema validation and data persistence.
 
 Your Codehooks.io application will get these endpoints for any collection defined in your schema:
 
@@ -54,7 +54,7 @@ Your Codehooks.io application will get these endpoints for any collection define
 |`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/:ID  | Delete object by ID in a collection  | 
 
 ## Example API usage
-The following examples shows how the CRUD API is used for a Codehooks.io application called `myproject-ff00` with a data space `dev`.
+The following examples shows how the CRUD API is used for a Codehooks.io application called `myproject-ff00` to access the data space `dev`.
 
 ```js
 GET
@@ -110,4 +110,20 @@ OUTPUT
 {
   "_id": "18268fe12f5-51co7n8a40s2zp"
 }
+```  
+
+## Local development
+You can also easily test out your app by [running it locally.](https://codehooks.io/docs/localdev)
+
+Just replace the public project routes `https://myproject-ff00.api.codehooks.io` with `http://localhost:3000`.
+
+E.g.
+
+```js
+POST
+
+http://localhost:3000/dev/customer
+
+BODY
+{"name": "Dave", "status": "active", "purchase": 0}
 ```  
