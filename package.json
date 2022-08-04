@@ -4,7 +4,7 @@
   "description": "CRUD automation library for codehooks.io",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"TODO: write some tests"
+    "test": "echo \"TODO: write some tests\""
   },
   "repository": {
     "type": "git",
