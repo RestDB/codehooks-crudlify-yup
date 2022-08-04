@@ -3,7 +3,7 @@ Create automatic CRUD API with schema and persistence for a Codehooks.io applica
 
 ## Install
 ```bash
-npm i codehooks-crudlify-yup yup -s
+npm i codehooks-crudlify-yup
 ```
 
 ## Code example

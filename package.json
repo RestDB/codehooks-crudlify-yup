@@ -1,0 +1,29 @@
+{
+  "name": "codehooks-crudlify-yup",
+  "version": "0.0.1",
+  "description": "CRUD automation library for codehooks.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RestDB/codehooks-crudlify-yup.git"
+  },
+  "keywords": [
+    "crud",
+    "rest",
+    "api",
+    "codehooks",
+    "serverless"
+  ],
+  "author": "codehooks-official",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RestDB/codehooks-crudlify-yup/issues"
+  },
+  "homepage": "https://github.com/RestDB/codehooks-crudlify-yup#readme",
+  "dependencies": {
+    "yup": "^0.32.11"
+  }
+}
