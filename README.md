@@ -1,5 +1,5 @@
 # codehooks-crudlify-yup
-Create automatic CRUD API with schema and persistence for a Codehooks.io application.
+Create automatic CRUD API with schema and persistence for a [Codehooks.io](https://codehooks.io) application.
 
 ## Install
 ```bash
@@ -44,11 +44,69 @@ By using the `crudlify(app, schema)` function, any Codehooks.io app effectively 
 
 Your Codehooks.io application will get these endpoints for any collection defined in your schema:
 
-| Verb  | Codehooks.io route  | Description  | Example endpoint  |
-|---|---|---|---|
-| `GET`  | https://{TENANT-ID}/{SPACE}/:collection  | Retrieve objects (by query) from a collection  | `https://myproject-ff00.api.codehooks.io/dev/customer?status=active&purchase>100`  |
-| `GET`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Retrieve object by ID from a collection  | `https://myproject-ff00.api.codehooks.io/dev/customer/1826817743c-6b11t89gws82a0`  |
-| `POST` | https://{TENANT-ID}/{SPACE}/:collection  | Add object(s) to a collection  | `https://myproject-ff00.api.codehooks.io/dev/customer`  |
-| `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID in a collection  | `https://myproject-ff00.api.codehooks.io/dev/customer/1826817743c-6b11t89gws82a0`  |
-|`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/:ID  | Delete object by ID in a collection  | `https://myproject-ff00.api.codehooks.io/dev/customer/1826817743c-6b11t89gws82a0`  |
+| Verb  | Codehooks.io route  | Description  |
+|:---|---|---|
+| `GET`  | https://{TENANT-ID}/{SPACE}/:collection  | Retrieve all objects (filtered by query) from a collection  |
+| `GET`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Retrieve object by ID from a collection  |
+| `POST` | https://{TENANT-ID}/{SPACE}/:collection  | Add object to a collection  | 
+| `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID in a collection  | 
+|`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/:ID  | Delete object by ID in a collection  | 
 
+## Example API usage
+The following examples shows how the CRUD API is used for a Codehooks.io application called `myproject-ff00` with a data space `dev`.
+
+```js
+GET
+
+https://myproject-ff00.api.codehooks.io/dev/customer?status=active&purchase>100
+
+[
+    {"name": "Jane", "status": "active", "purchase": 234, "_id": "18268179e4a-q3pz9of7st6kam"},
+    {"name": "Joe", "status": "active", "purchase": 432, "_id": "182683fb57f-rzxrz7fdx1lrcd"}
+]
+```  
+
+```js
+GET
+
+https://myproject-ff00.api.codehooks.io/dev/customer/18268179e4a-q3pz9of7st6kam
+
+OUTPUT
+{"name": "Jane", "status": "active", "purchase": 234, "_id": "18268179e4a-q3pz9of7st6kam"}
+```  
+
+```js
+POST
+
+https://myproject-ff00.api.codehooks.io/dev/customer
+
+BODY
+{"name": "Dave", "status": "active", "purchase": 0}
+```  
+
+```js
+PUT
+
+https://myproject-ff00.api.codehooks.io/dev/customer/18268fe12f5-51co7n8a40s2zp
+
+BODY
+{"purchase": 12}
+
+OUTPUT
+{
+  "name": "Dave",
+  "price": 12,
+  "_id": "18268fe12f5-51co7n8a40s2zp"
+}
+```  
+
+```js
+DELETE
+
+https://myproject-ff00.api.codehooks.io/dev/customer/18268fe12f5-51co7n8a40s2zp
+
+OUTPUT
+{
+  "_id": "18268fe12f5-51co7n8a40s2zp"
+}
+```  
