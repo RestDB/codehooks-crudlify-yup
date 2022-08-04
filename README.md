@@ -1,5 +1,5 @@
 # codehooks-crudlify-yup
-Create automatic CRUD API with schema and persistance for an Codehooks.io application.
+Create automatic CRUD API with schema and persistence for a Codehooks.io application.
 
 ## Install
 ```bash
