@@ -3,8 +3,7 @@ Create automatic CRUD API with [Yup schema](https://www.npmjs.com/package/yup) a
 
 ## Install
 ```bash
-npm install codehooks-crudlify-yup
-npm install codehooks-js
+npm install codehooks-crudlify-yup codehooks-js
 npm install
 ```
 
