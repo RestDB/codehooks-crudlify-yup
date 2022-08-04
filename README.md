@@ -12,7 +12,7 @@ npm i codehooks-crudlify-yup yup -s
 * Auto CRUD example using yup schema
 */
 import { app } from 'codehooks-js'
-import crudlify from 'crudlify-yup-schema';
+import crudlify from 'codehooks-crudlify-yup';
 import * as yup from 'yup';
 
 // yup schema per collection
