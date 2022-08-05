@@ -1,7 +1,7 @@
 {
   "name": "codehooks-crudlify-yup",
   "version": "0.0.3",
-  "description": "CRUD automation library for codehooks.io",
+  "description": "CRUD wrapper automation library for codehooks.io.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"TODO: write some tests\""
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/RestDB/codehooks-crudlify-yup#readme",
   "dependencies": {
-    "yup": "^0.32.11",
-    "query-to-mongo": "^0.10.2"
+    "query-to-mongo": "^0.10.2",
+    "yup": "^0.32.11"
   }
 }

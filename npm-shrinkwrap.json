@@ -9,6 +9,7 @@
       "version": "0.0.3",
       "license": "ISC",
       "dependencies": {
+        "query-to-mongo": "^0.10.2",
         "yup": "^0.32.11"
       }
     },
@@ -47,6 +48,11 @@
       "version": "2.0.5",
       "resolved": "https://registry.npmjs.org/property-expr/-/property-expr-2.0.5.tgz",
       "integrity": "sha512-IJUkICM5dP5znhCckHSv30Q4b5/JA5enCtkRHYaOVOAocnH/1BQEYTC5NMfT3AVl/iXKdr3aqQbQn9DxyWknwA=="
+    },
+    "node_modules/query-to-mongo": {
+      "version": "0.10.2",
+      "resolved": "https://registry.npmjs.org/query-to-mongo/-/query-to-mongo-0.10.2.tgz",
+      "integrity": "sha512-H2e6/h8+DJT8K/hNeh2SQvhMUtEIKAeAYwCryG4vOSfV8nHsFPMLeyZF4h1BnY19idX1jyCFU40o9q9CYp7Q4g=="
     },
     "node_modules/regenerator-runtime": {
       "version": "0.13.9",
@@ -109,6 +115,11 @@
       "version": "2.0.5",
       "resolved": "https://registry.npmjs.org/property-expr/-/property-expr-2.0.5.tgz",
       "integrity": "sha512-IJUkICM5dP5znhCckHSv30Q4b5/JA5enCtkRHYaOVOAocnH/1BQEYTC5NMfT3AVl/iXKdr3aqQbQn9DxyWknwA=="
+    },
+    "query-to-mongo": {
+      "version": "0.10.2",
+      "resolved": "https://registry.npmjs.org/query-to-mongo/-/query-to-mongo-0.10.2.tgz",
+      "integrity": "sha512-H2e6/h8+DJT8K/hNeh2SQvhMUtEIKAeAYwCryG4vOSfV8nHsFPMLeyZF4h1BnY19idX1jyCFU40o9q9CYp7Q4g=="
     },
     "regenerator-runtime": {
       "version": "0.13.9",
