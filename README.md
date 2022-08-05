@@ -8,8 +8,7 @@ The package [query-to-mongo](https://www.npmjs.com/package/query-to-mongo) are u
 
 ## Install
 ```bash
-npm install yup codehooks-crudlify-yup
-npm install codehooks-js
+npm install codehooks-crudlify-yup codehooks-js
 npm install
 ```
 
