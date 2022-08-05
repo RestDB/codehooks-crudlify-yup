@@ -1,12 +1,12 @@
 {
   "name": "codehooks-crudlify-yup",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "codehooks-crudlify-yup",
-      "version": "0.0.3",
+      "version": "0.0.4",
       "license": "ISC",
       "dependencies": {
         "query-to-mongo": "^0.10.2",
