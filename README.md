@@ -1,14 +1,19 @@
 # codehooks-crudlify-yup
 Create automatic CRUD API with [Yup schema](https://www.npmjs.com/package/yup) and persistence for a [Codehooks.io](https://codehooks.io) application.
+The package [query-to-mongo](https://www.npmjs.com/package/query-to-mongo) are used to convert REST API query parameters to MongodBD queries agains the Codehooks.io datastore engine.
+
+**Example REST API with query:**
+
+`https://myproject-ff00.api.codehooks.io/devstore/customers?name=john&age>21`
 
 ## Install
 ```bash
-npm install codehooks-crudlify-yup
+npm install yup codehooks-crudlify-yup
 npm install codehooks-js
 npm install
 ```
 
-## Code example
+## Usage
 ```js
 /*
 * Auto CRUD example using yup schema
@@ -127,3 +132,5 @@ http://localhost:3000/dev/customer
 BODY
 {"name": "Dave", "status": "active", "purchase": 0}
 ```  
+
+> A similar package using JSON Schema exists [here](https://www.npmjs.com/package/codehooks-crudlify-jsonschema)
