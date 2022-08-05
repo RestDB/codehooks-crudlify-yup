@@ -47,12 +47,22 @@ async function createFunc(req, res) {
 
 async function readManyFunc(req, res) {
     const {collection} = req.params;
+    const mongoQuery = q2m(req.query);
     if (_opt.strict && !_schema[collection]) {
         return res.status(404).send(`No collection ${collection}`)
-    }
+    }   
     const conn = await Datastore.open();
     const options = {
-        filter: q2m(req.query).criteria
+        filter: mongoQuery.criteria
+    }
+    if (mongoQuery.options.fields) {
+        options.hints = {$fields: mongoQuery.options.fields}
+    }
+    if (mongoQuery.options.limit) {
+        options.limit = mongoQuery.options.limit
+    }
+    if (mongoQuery.options.skip) {
+        options.offset = mongoQuery.options.skip
     }
     conn.getMany(collection, options).json(res);  
 }
