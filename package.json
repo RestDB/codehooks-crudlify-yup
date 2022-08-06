@@ -1,6 +1,6 @@
 {
   "name": "codehooks-crudlify-yup",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CRUD wrapper automation library for codehooks.io.",
   "main": "index.js",
   "scripts": {
