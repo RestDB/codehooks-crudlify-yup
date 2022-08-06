@@ -1,6 +1,6 @@
 # codehooks-crudlify-yup
 Create automatic CRUD API with [Yup schema](https://www.npmjs.com/package/yup) and persistence for a [Codehooks.io](https://codehooks.io) application.
-The package [query-to-mongo](https://www.npmjs.com/package/query-to-mongo) are used to convert REST API query parameters to MongodBD queries agains the Codehooks.io datastore engine.
+The package [query-to-mongo](https://www.npmjs.com/package/query-to-mongo) are used to convert REST API query parameters to MongoDB queries agains the Codehooks.io datastore engine.
 
 **Example REST API with query:**
 
