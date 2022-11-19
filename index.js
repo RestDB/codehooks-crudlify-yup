@@ -76,8 +76,8 @@ async function readOneFunc(req, res) {
     const { collection, ID } = req.params;
     const conn = await Datastore.open();
     try {
-        if (_opt.strict && !_schema[collection]) {
-            throw `No collection ${collection}`
+        if (_schema[collection] === undefined) {
+            return res.status(404).send(`No collection ${collection}`)
         }
         const result = await conn.getOne(collection, ID);
         res.json(result);
