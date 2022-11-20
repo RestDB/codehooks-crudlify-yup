@@ -54,7 +54,8 @@ Your Codehooks.io application will get these endpoints for any collection define
 | `GET`  | https://{TENANT-ID}/{SPACE}/:collection  | Retrieve all objects (filtered by query) from a collection  |
 | `GET`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Retrieve object by ID from a collection  |
 | `POST` | https://{TENANT-ID}/{SPACE}/:collection  | Add object to a collection  | 
-| `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID in a collection  | 
+| `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Replace object by ID in a collection  | 
+| `PATCH`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID in a collection  | 
 |`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/:ID  | Delete object by ID in a collection  | 
 
 ## Example API usage
