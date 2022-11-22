@@ -45,7 +45,7 @@ export default app.init();
 ```
 
 ## Automatic REST API
-By using the `crudlify(app, schema)` function, your Codehooks.io app effectively gets a complete HTTP/2 REST API with schema validation and data persistence.
+By using the `crudlify(app, schema)` function, your Codehooks.io app effectively gets a complete HTTP REST API with schema validation and data persistence.
 
 Your Codehooks.io application will get these endpoints for any collection defined in your schema:
 
