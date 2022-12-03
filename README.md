@@ -9,7 +9,6 @@ The package [query-to-mongo](https://www.npmjs.com/package/query-to-mongo) are u
 ## Install
 ```bash
 npm install yup codehooks-crudlify-yup codehooks-js
-npm install
 ```
 
 ## Usage
@@ -21,23 +20,25 @@ import app from 'codehooks-js'
 import crudlify from 'codehooks-crudlify-yup';
 import * as yup from 'yup';
 
-// yup schema per collection
-let schema = {
-    "customer":
-        yup.object().shape({
-            name: yup.string().required(),
-            status: yup.string().required(),
-            purchase: yup.number().required().positive().integer()
-        }),
-    "product":
-        yup.object().shape({
-            name: yup.string().required(),
-            price: yup.number().required().positive().integer()
-        })
-}
+// yup schema customer
+const customer =
+    yup.object().shape({
+        name: yup.string().required(),
+        status: yup.string().required(),
+        purchase: yup.number().required().positive().integer()
+    })
 
-// Add CRUD routes with yup schema
-crudlify(app, schema);
+// yup schema product
+const product =
+    yup.object().shape({
+        name: yup.string().required(),
+        price: yup.number().required().positive().integer()
+    })
+
+
+// Add CRUD routes for collections (customer and product) with yup schema
+crudlify(app, {customer, product});
+
 
 // bind to serverless runtime
 export default app.init();

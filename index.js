@@ -40,20 +40,27 @@ async function createFunc(req, res) {
                     res.status(400).json(err);
                 });
         } else {
-            // insert with no schema
+            // insert with collection name but no schema
             const result = await conn.insertOne(collection, document);
             res.json(result);
         }
     } else {
-        return res.status(400).json({ "error": `Collection not found: ${collection}` });
+        if (Object.keys(_schema).length === 0) {
+            // insert any collection name no schema definitions, anything goes
+            const result = await conn.insertOne(collection, document);
+            res.json(result);
+        } else {
+            return res.status(400).json({ "error": `Collection not found: ${collection}` });
+        }
+        
     }
 }
 
 
 async function readManyFunc(req, res) {
     const { collection } = req.params;
-    const mongoQuery = q2m(req.query);
-    if (_schema[collection] === undefined) {
+    const mongoQuery = q2m(req.query);    
+    if (Object.keys(_schema).length > 0 && _schema[collection] === undefined) {
         return res.status(404).send(`No collection ${collection}`)
     }
     const conn = await Datastore.open();
@@ -76,7 +83,7 @@ async function readOneFunc(req, res) {
     const { collection, ID } = req.params;
     const conn = await Datastore.open();
     try {
-        if (_schema[collection] === undefined) {
+        if (Object.keys(_schema).length > 0 && _schema[collection] === undefined) {
             return res.status(404).send(`No collection ${collection}`)
         }
         const result = await conn.getOne(collection, ID);
