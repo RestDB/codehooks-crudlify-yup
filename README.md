@@ -52,12 +52,14 @@ Your Codehooks.io application will get these endpoints for any collection define
 
 | Verb  | Codehooks.io route  | Description  |
 |:---|---|---|
-| `GET`  | https://{TENANT-ID}/{SPACE}/:collection  | Retrieve all objects (filtered by query) from a collection  |
-| `GET`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Retrieve object by ID from a collection  |
-| `POST` | https://{TENANT-ID}/{SPACE}/:collection  | Add object to a collection  | 
-| `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Replace object by ID in a collection  | 
-| `PATCH`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID in a collection  | 
-|`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/:ID  | Delete object by ID in a collection  | 
+| `GET`  | https://{TENANT-ID}/{SPACE}/:collection  | Retrieve all objects (filtered by query)  |
+| `GET`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Retrieve object by ID  |
+| `POST` | https://{TENANT-ID}/{SPACE}/:collection  | Add object  | 
+| `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Replace object by ID  | 
+| `PATCH`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID  | 
+| `PATCH`  | https://{TENANT-ID}/{SPACE}/:collection/*  | Update object(s) by query  | 
+|`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/:ID  | Delete object by ID  | 
+|`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/*  | Delete object(s) by query  | 
 
 ## Example API usage
 The following examples shows how the CRUD API is used for a Codehooks.io application called `myproject-ff00` to access the data space `dev`.
