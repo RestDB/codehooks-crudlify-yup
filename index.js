@@ -1,5 +1,9 @@
 import q2m from 'query-to-mongo';
+import {Datastore} from 'codehooks-js';
+import Debug from "debug";
+const debug = Debug("codehooks-crudlify");
 
+let _app = null;
 let _schema = {};
 let _opt = {};
 
@@ -10,6 +14,7 @@ let _opt = {};
  * @param {object} opt - Options for strict
  */
 export default function crudlify(app, schema = {}, opt = { strict: false }) {
+    _app = app;
     _schema = schema;
     _opt = opt;
     // Codehooks API routes
@@ -17,8 +22,11 @@ export default function crudlify(app, schema = {}, opt = { strict: false }) {
     app.get('/:collection', readManyFunc);
     app.get('/:collection/:ID', readOneFunc);
     app.put('/:collection/:ID', updateFunc);
+    app.patch('/:collection/*', patchManyFunc);
     app.patch('/:collection/:ID', patchFunc);
+    app.delete('/:collection/*', deleteManyFunc);
     app.delete('/:collection/:ID', deleteFunc);
+    
 }
 
 async function createFunc(req, res) {
@@ -40,12 +48,13 @@ async function createFunc(req, res) {
                     res.status(400).json(err);
                 });
         } else {
-            // insert with collection name but no schema
+            // insert with collection name but no schema            
             const result = await conn.insertOne(collection, document);
             res.json(result);
         }
     } else {
         if (Object.keys(_schema).length === 0) {
+            debug("data", collection, document)
             // insert any collection name no schema definitions, anything goes
             const result = await conn.insertOne(collection, document);
             res.json(result);
@@ -58,6 +67,7 @@ async function createFunc(req, res) {
 
 
 async function readManyFunc(req, res) {
+    
     const { collection } = req.params;
     const mongoQuery = q2m(req.query);    
     if (Object.keys(_schema).length > 0 && _schema[collection] === undefined) {
@@ -76,10 +86,12 @@ async function readManyFunc(req, res) {
     if (mongoQuery.options.skip) {
         options.offset = mongoQuery.options.skip
     }
-    conn.getMany(collection, options).json(res);
+    
+    (await conn.getMany(collection, options)).json(res);
 }
 
 async function readOneFunc(req, res) {
+    console.log("crudlify read one")
     const { collection, ID } = req.params;
     const conn = await Datastore.open();
     try {
@@ -91,7 +103,7 @@ async function readOneFunc(req, res) {
     } catch (e) {
         res
             .status(404) // not found
-            .end(e);
+            .end(e.message);
     }
 }
 
@@ -123,11 +135,46 @@ async function patchFunc(req, res) {
     }
 }
 
+async function patchManyFunc(req, res) {
+    const { collection } = req.params;
+    const mongoQuery = q2m(req.query);    
+    const options = {
+        filter: mongoQuery.criteria
+    }
+    try {
+        const document = req.body;
+        const conn = await Datastore.open();
+        const result = await conn.updateMany(collection, document, options);
+        res.json(result);
+    } catch (e) {
+        res
+            .status(404) // not found
+            .end(e);
+    }
+}
+
 async function deleteFunc(req, res) {
     const { collection, ID } = req.params;
     try {
         const conn = await Datastore.open();
         const result = await conn.removeOne(collection, ID, {});
+        res.json(result);
+    } catch (e) {
+        res
+            .status(404) // not found
+            .end(e);
+    }
+}
+
+async function deleteManyFunc(req, res) {
+    const { collection } = req.params;
+    const mongoQuery = q2m(req.query);    
+    const options = {
+        filter: mongoQuery.criteria
+    }
+    try {        
+        const conn = await Datastore.open();
+        const result = await conn.removeMany(collection, options);
         res.json(result);
     } catch (e) {
         res
