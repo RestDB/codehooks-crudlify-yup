@@ -57,9 +57,9 @@ Your Codehooks.io application will get these endpoints for any collection define
 | `POST` | https://{TENANT-ID}/{SPACE}/:collection  | Add object  | 
 | `PUT`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Replace object by ID  | 
 | `PATCH`  | https://{TENANT-ID}/{SPACE}/:collection/:ID  | Update object by ID  | 
-| `PATCH`  | https://{TENANT-ID}/{SPACE}/:collection/*  | Update object(s) by query  | 
+| `PATCH`  | https://{TENANT-ID}/{SPACE}/:collection/_byquery  | Update object(s) by query  | 
 |`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/:ID  | Delete object by ID  | 
-|`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/*  | Delete object(s) by query  | 
+|`DELETE`| https://{TENANT-ID}/{SPACE}/:collection/_byquery  | Delete object(s) by query  | 
 
 ## Example API usage
 The following examples shows how the CRUD API is used for a Codehooks.io application called `myproject-ff00` to access the data space `dev`.

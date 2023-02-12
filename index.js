@@ -22,9 +22,9 @@ export default function crudlify(app, schema = {}, opt = { strict: false }) {
     app.get('/:collection', readManyFunc);
     app.get('/:collection/:ID', readOneFunc);
     app.put('/:collection/:ID', updateFunc);
-    app.patch('/:collection/*', patchManyFunc);
+    app.patch('/:collection/_byquery', patchManyFunc);
     app.patch('/:collection/:ID', patchFunc);
-    app.delete('/:collection/*', deleteManyFunc);
+    app.delete('/:collection/_byquery', deleteManyFunc);
     app.delete('/:collection/:ID', deleteFunc);
     
 }
