@@ -9,7 +9,7 @@
       "version": "1.0.4",
       "license": "ISC",
       "dependencies": {
-        "codehooks-js": "^1.0.2",
+        "codehooks-js": "^1.0.3",
         "debug": "^4.3.4",
         "query-to-mongo": "^0.10.2",
         "yup": "^0.32.11"
