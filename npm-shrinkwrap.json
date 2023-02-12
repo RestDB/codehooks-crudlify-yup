@@ -1,12 +1,12 @@
 {
   "name": "codehooks-crudlify-yup",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "codehooks-crudlify-yup",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "license": "ISC",
       "dependencies": {
         "codehooks-js": "^1.0.1",
