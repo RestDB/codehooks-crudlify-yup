@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/RestDB/codehooks-crudlify-yup#readme",
   "dependencies": {
-    "codehooks-js": "^1.0.1",
+    "codehooks-js": "^1.0.2",
     "debug": "^4.3.4",
     "query-to-mongo": "^0.10.2",
     "yup": "^0.32.11"
