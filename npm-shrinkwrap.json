@@ -9,7 +9,6 @@
       "version": "1.0.5",
       "license": "ISC",
       "dependencies": {
-        "codehooks-js": "^1.0.3",
         "debug": "^4.3.4",
         "query-to-mongo": "^0.10.2",
         "yup": "^0.32.11"
@@ -35,6 +34,7 @@
       "version": "1.0.3",
       "resolved": "https://registry.npmjs.org/codehooks-js/-/codehooks-js-1.0.3.tgz",
       "integrity": "sha512-okGgkIH1QVDx7S0ylFduixnpvJazL9vgYYCDOmmqXxBRmPLzLH0B1VJ9c0CdaaydSk5uquD4hTJSSdqJ0pl7ow==",
+      "extraneous": true,
       "hasShrinkwrap": true,
       "dependencies": {
         "cron-parser": "^4.7.1",
@@ -49,6 +49,7 @@
       "version": "4.7.1",
       "resolved": "https://registry.npmjs.org/cron-parser/-/cron-parser-4.7.1.tgz",
       "integrity": "sha512-WguFaoQ0hQ61SgsCZLHUcNbAvlK0lypKXu62ARguefYmjzaOXIVRNrAmyXzabTwUn4sQvQLkk6bjH+ipGfw8bA==",
+      "extraneous": true,
       "dependencies": {
         "luxon": "^3.2.1"
       },
@@ -60,6 +61,7 @@
       "version": "4.3.4",
       "resolved": "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz",
       "integrity": "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==",
+      "extraneous": true,
       "dependencies": {
         "ms": "2.1.2"
       },
@@ -76,6 +78,7 @@
       "version": "3.2.1",
       "resolved": "https://registry.npmjs.org/luxon/-/luxon-3.2.1.tgz",
       "integrity": "sha512-QrwPArQCNLAKGO/C+ZIilgIuDnEnKx5QYODdDtbFaxzsbZcc/a7WFq7MhsVYgRlwawLtvOUESTlfJ+hc/USqPg==",
+      "extraneous": true,
       "engines": {
         "node": ">=12"
       }
@@ -83,12 +86,14 @@
     "node_modules/codehooks-js/node_modules/ms": {
       "version": "2.1.2",
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
-      "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
+      "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==",
+      "extraneous": true
     },
     "node_modules/codehooks-js/node_modules/node-cron": {
       "version": "3.0.2",
       "resolved": "https://registry.npmjs.org/node-cron/-/node-cron-3.0.2.tgz",
       "integrity": "sha512-iP8l0yGlNpE0e6q1o185yOApANRe47UPbLf4YxfbiNHt/RU5eBcGB/e0oudruheSf+LQeDMezqC5BVAb5wwRcQ==",
+      "extraneous": true,
       "dependencies": {
         "uuid": "8.3.2"
       },
@@ -100,6 +105,7 @@
       "version": "8.3.2",
       "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
       "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+      "extraneous": true,
       "bin": {
         "uuid": "dist/bin/uuid"
       }
@@ -193,9 +199,9 @@
       "integrity": "sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q=="
     },
     "codehooks-js": {
-      "version": "1.0.3",
-      "resolved": "https://registry.npmjs.org/codehooks-js/-/codehooks-js-1.0.3.tgz",
+      "version": "https://registry.npmjs.org/codehooks-js/-/codehooks-js-1.0.3.tgz",
       "integrity": "sha512-okGgkIH1QVDx7S0ylFduixnpvJazL9vgYYCDOmmqXxBRmPLzLH0B1VJ9c0CdaaydSk5uquD4hTJSSdqJ0pl7ow==",
+      "extraneous": true,
       "requires": {
         "cron-parser": "^4.7.1",
         "debug": "^4.3.4",
@@ -206,6 +212,7 @@
           "version": "4.7.1",
           "resolved": "https://registry.npmjs.org/cron-parser/-/cron-parser-4.7.1.tgz",
           "integrity": "sha512-WguFaoQ0hQ61SgsCZLHUcNbAvlK0lypKXu62ARguefYmjzaOXIVRNrAmyXzabTwUn4sQvQLkk6bjH+ipGfw8bA==",
+          "extraneous": true,
           "requires": {
             "luxon": "^3.2.1"
           }
@@ -214,6 +221,7 @@
           "version": "4.3.4",
           "resolved": "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz",
           "integrity": "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==",
+          "extraneous": true,
           "requires": {
             "ms": "2.1.2"
           }
@@ -221,17 +229,20 @@
         "luxon": {
           "version": "3.2.1",
           "resolved": "https://registry.npmjs.org/luxon/-/luxon-3.2.1.tgz",
-          "integrity": "sha512-QrwPArQCNLAKGO/C+ZIilgIuDnEnKx5QYODdDtbFaxzsbZcc/a7WFq7MhsVYgRlwawLtvOUESTlfJ+hc/USqPg=="
+          "integrity": "sha512-QrwPArQCNLAKGO/C+ZIilgIuDnEnKx5QYODdDtbFaxzsbZcc/a7WFq7MhsVYgRlwawLtvOUESTlfJ+hc/USqPg==",
+          "extraneous": true
         },
         "ms": {
           "version": "2.1.2",
           "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
-          "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
+          "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==",
+          "extraneous": true
         },
         "node-cron": {
           "version": "3.0.2",
           "resolved": "https://registry.npmjs.org/node-cron/-/node-cron-3.0.2.tgz",
           "integrity": "sha512-iP8l0yGlNpE0e6q1o185yOApANRe47UPbLf4YxfbiNHt/RU5eBcGB/e0oudruheSf+LQeDMezqC5BVAb5wwRcQ==",
+          "extraneous": true,
           "requires": {
             "uuid": "8.3.2"
           }
@@ -239,7 +250,8 @@
         "uuid": {
           "version": "8.3.2",
           "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz",
-          "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg=="
+          "integrity": "sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==",
+          "extraneous": true
         }
       }
     },
