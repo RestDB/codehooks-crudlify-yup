@@ -17,7 +17,11 @@ export default function crudlify(app, schema = {}, opt = { strict: false }) {
     _app = app;
     _schema = schema;
     _opt = opt;
-    debug("Datastore", app.datastore)
+    try {
+        Datastore = DB;
+    } catch (error) {
+        debug("Standalone mode:", error.message)
+    }
     app.addListener((updatedApp) => {
         Datastore = updatedApp.getDatastore();
         debug('Updated app', Datastore)
