@@ -1,8 +1,8 @@
 import q2m from 'query-to-mongo';
-import {Datastore} from 'codehooks-js';
 import Debug from "debug";
 const debug = Debug("codehooks-crudlify");
 
+let Datastore = null;
 let _app = null;
 let _schema = {};
 let _opt = {};
@@ -17,6 +17,11 @@ export default function crudlify(app, schema = {}, opt = { strict: false }) {
     _app = app;
     _schema = schema;
     _opt = opt;
+    debug("Datastore", app.datastore)
+    app.addListener((updatedApp) => {
+        Datastore = updatedApp.getDatastore();
+        debug('Updated app', Datastore)
+    })
     // Codehooks API routes
     app.post('/:collection', createFunc);
     app.get('/:collection', readManyFunc);
