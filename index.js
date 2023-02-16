@@ -22,10 +22,14 @@ export default function crudlify(app, schema = {}, opt = { strict: false }) {
     } catch (error) {
         debug("Standalone mode:", error.message)
     }
-    app.addListener((updatedApp) => {
-        Datastore = updatedApp.getDatastore();
-        debug('Updated app', Datastore)
-    })
+    try {
+        app.addListener((updatedApp) => {
+            Datastore = updatedApp.getDatastore();
+            debug('Updated app', Datastore)
+        })
+    } catch (error) {
+        debug(error)
+    }
     // Codehooks API routes
     app.post('/:collection', createFunc);
     app.get('/:collection', readManyFunc);
@@ -37,6 +41,13 @@ export default function crudlify(app, schema = {}, opt = { strict: false }) {
     app.delete('/:collection/:ID', deleteFunc);
     
 }
+
+const setDatastore = function(ds) {
+    Datastore = ds;
+}
+
+export {crudlify as crudlify, setDatastore}
+
 
 async function createFunc(req, res) {
     const { collection } = req.params;
