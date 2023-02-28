@@ -121,9 +121,11 @@ OUTPUT
 ```  
 
 ## Local development
-You can also easily test out your app by [running it locally.](https://codehooks.io/docs/localdev)
+You can also easily test out your app by using the [codehooks-mongodb](https://www.npmjs.com/package/codehooks-mongodb) package. This repository is an open source implementation of a codehooks.io backend with a MongoDB database for persistence. This package enables a standard serverless codehooks.io backend to run as a standalone express.js instance.
 
-Just replace the public project routes `https://myproject-ff00.api.codehooks.io` with `http://localhost:3000`.
+Follow the instructions in the codehooks-mongodb package by creating a `standalone.js` express app.
+
+Then replace the public project routes `https://myproject-ff00.api.codehooks.io` with e.g. `http://localhost:3000`.
 
 E.g.
 
